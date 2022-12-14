@@ -411,3 +411,8 @@ body {
   line-height: 16px;
   padding-top: 72px;
 }
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
