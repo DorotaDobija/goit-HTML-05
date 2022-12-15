@@ -21,8 +21,10 @@
     <title>WebStudio</title>
   </head>
   <body>
-    <!-- <div class="modal is-hidden" data-modal>
-      <button data-modal-close>x</button>
+    <!-- <div class="backdrop is-hidden" data-modal>
+      <div class="modal is-hidden">
+        <button data-modal-close>x</button>
+      </div>
     </div> -->
     <header>
       <!-- NAV BOX -->
@@ -70,9 +72,11 @@
           <div class="container title-container">
             <h1 class="page-title">Efektywne rozwiązania <br />dla waszego biznesu</h1>
             <button class="button-title" type="button" data-modal-open>Zamów usługę</button>
-            <!-- <div class="modal is-hidden" data-modal>
-              <button data-modal-close>x</button>
-            </div> -->
+            <div class="backdrop-modal is-hidden" data-modal>
+              <div class="modal">
+                <button class="modal-button" data-modal-close>&times;</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
