@@ -49,7 +49,20 @@ body {
   color: var(--focus-color);
   text-decoration: none;
 }
-
+.is-active {
+  position: relative;
+  color: var(--focus-color);
+}
+.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 53px;
+  height: 4px;
+  top: 44px;
+  color: var(--focus-color);
+  border-radius: 2px;
+}
 .contact-links {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
