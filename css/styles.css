@@ -39,6 +39,9 @@ body {
 .nav-list-item-link {
   color: var(--brand-color);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-item-link:hover,
@@ -58,7 +61,9 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
-  fill: currentColor;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-links:hover,
@@ -66,9 +71,14 @@ body {
   color: var(--focus-color);
   text-decoration: none;
 }
-
-.contact-links:hover > svg,
-.contact-links:focus > svg {
+.contact-links-svg {
+  fill: var(--secondary-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-links:hover > .contact-links-svg,
+.contact-links:focus > .contact-links-svg {
   fill: var(--focus-color);
 }
 .page-title {
@@ -180,6 +190,9 @@ body {
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-list-item:hover,
@@ -310,6 +323,9 @@ body {
 }
 .pictures-list-item {
   flex-basis: calc((100% - 60px) / 3);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .caption-box {
   border-bottom: 1px solid #eeeeee;
@@ -344,6 +360,9 @@ body {
 }
 .team-icons {
   fill: var(--icon-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media-icons-box {
   display: flex;
@@ -352,6 +371,11 @@ body {
   padding-bottom: 30px;
   padding-left: 32px;
   padding-right: 32px;
+}
+.icon-social-media {
+  transition-property: background-color, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-social-media:hover,
 .icon-social-media:focus {
@@ -370,6 +394,9 @@ body {
   justify-content: center;
   fill: var(--icon-color);
   padding: 16px 32px;
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-logo:hover,
 .client-logo:focus {
@@ -395,12 +422,15 @@ body {
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icons {
   fill: var(--white-color);
 }
-.footer-icons:hover,
-.footer-icons:focus {
+.footer-icon-social-media:hover,
+.footer-icon-social-media:focus {
   background-color: var(--focus-color);
   border-radius: 50%;
 }
@@ -411,8 +441,37 @@ body {
   line-height: 16px;
   padding-top: 72px;
 }
-.is-hidden {
+/* .is-hidden {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+}
+.modal {
+  position: absolute;
+  background-color: var(--white-color);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  width: 528px;
+  height: 581px;
+} */
+.picture {
+  width: 370px;
+  height: 294px;
+  position: relative;
+}
+.picture-descripion {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: Center;
+  letter-spacing: 3%;
+  color: var(--white-color);
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  padding: 27px 90px;
 }
