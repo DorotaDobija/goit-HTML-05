@@ -60,7 +60,7 @@ body {
   width: 53px;
   height: 4px;
   top: 44px;
-  color: var(--focus-color);
+  background-color: var(--focus-color);
   border-radius: 2px;
 }
 .contact-links {
@@ -468,6 +468,13 @@ body {
   width: 528px;
   height: 581px;
   top: 221px;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+  transform: scale(1);
+}
+.is-hidden .modal {
+  transform: scale(0);
 }
 .backdrop-modal {
   position: fixed;
@@ -480,6 +487,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .modal-button {
   position: absolute;
   top: 0;
