@@ -487,8 +487,6 @@ body {
   align-items: center;
   justify-content: center;
   transition: visibility 500ms linear, opacity 500ms linear;
-  visibility: visible;
-  opacity: 1;
 }
 
 .modal-button {
